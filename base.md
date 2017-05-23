@@ -9,34 +9,35 @@
 ## API
 1. ebapBase.get(options)
    > 获取某个模块  options {object}
-
-    ```javascript
-    /*
-     id: 主组件的id,
-     key: 模块的关键字
-     name: 会把get方法返回的实例挂载到window[name]中
-     deps: 生命当前模块的依赖模块,
-     settings: 配置当前页面所需要的url,
-     created: 当模块实例被创建时调用
-    */
-    ebapBase.get({
-        id: 'miniuiid', 
-        key: 'form|list|login|modal', 
-        name: '',
+   
+   ```javascript
+     // id: 主组件的id,
+     // key: 模块的关键字
+     // name: 会把get方法返回的实例挂载到window[name]中
+     // deps: 生命当前模块的依赖模块,
+     // settings: 配置当前页面所需要的url,
+     // created: 当模块实例被创建时调用
+     
+   ebapBase.get({
+	id: 'miniuiid', 
+	key: 'form|list|login|modal', 
+	name: '',
 	deps: [{
 	  key: 'modal'
 	}], 
 	settings: {} 
 	created: function () {}
-    });
+    });
+    
     ```
 2. ebapBase.regesiter
    > 注册模块进入ebapBase.modules里
+   
     ```javascript
-    ebapBase.regesiter(moduleKey, module);
-    // moduleKey 模块的key
-    // module 可以是一个模块函数或者是一个对象，当是对象时，常用于私有模块定义
-    ```
+     // moduleKey 模块的key,module 可以是一个模块函数或者是一个对象，当是对象时，常用于私有模块定义
+     ebapBase.regesiter(moduleKey, module); 
+     ```
+    
 3. **ebapBase.utils**
   > ebapBase的公共函数，供内部和外部调用
    
