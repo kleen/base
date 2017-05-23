@@ -12,20 +12,25 @@
 
     ```javascript
     ebapBase.get({
-        id: 'miniuiid',
-        key: 'form|list|login|modal',
-        ...otherOptions
-    });
+        id: 'miniuiid', // 主组件的id
+        key: 'form|list|login|modal', // 模块的关键字
+        name: '', // 会把get方法返回的实例挂载到window[name]中
+	deps: [{
+	  key: 'modal'
+	}], // 生命当前模块的依赖模块,
+	settings: {} // 配置当前页面所需要的url
+	created: function () {} // 当模块实例被创建时调用
+    });
     ```
 2. ebapBase.regesiter
    > 注册模块进入ebapBase.modules里
     ```javascript
     ebapBase.regesiter(moduleKey, module);
-    ```
-
-**3. ebapBase.utils**
-  > ebapBase的公共函数，供内部和外部调用
-   
+    // moduleKey 模块的key
+    // module 可以是一个模块函数或者是一个对象，当是对象时，常用于私有模块定义
+    ```
+3. **ebapBase.utils**
+  > ebapBase的公共函数，供内部和外部调用
    
   + ebapBase.utils.support
     判断是否存在某个库，支持某个方法
@@ -140,15 +145,11 @@
    > 通用弹出窗口
     ```javascript
     var customModal = ebapModal({
-        desc: resJson.desc,
-        detailInfo: ebapModal.getDetailInfo(resJson.detailInfo)
-        }, '.ebap-maskContainer', document
+        desc: resJson.desc, // 信息描述
+        detailInfo: resJson.detailInfo // 信息详情
+      }, '.ebap-maskContainer', document
     );
     ```
-+ getDetailInfo
- 
-  将数据转换成特定格式展现
-
 + show
 
   显示弹窗
