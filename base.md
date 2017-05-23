@@ -86,10 +86,10 @@
   + ebapBase.utils.extendInjectRules
     
     扩展默认的注入规则
-    
+
 ### Modules
 
-1. Form
+1. **Form**
 
 > 提供Form界面通用功能
 
@@ -126,7 +126,7 @@
 
    点击取消按钮触发
 
-2. List
+2. **List**
 
 > 提供列表页面通用功能
 
@@ -163,7 +163,7 @@
 
    点击删除按钮，调用这个方法
 
-3. Login
+3. **Login**
 
     > 提供对页面登录和退出的通用控制，目前只开发了退出
 
@@ -172,7 +172,7 @@
       当页面session过期时,将框架最外层窗口重置到登录页
 
 
-4. Modal
+4. **Modal**
 
    > 通用弹出窗口
     ```javascript
