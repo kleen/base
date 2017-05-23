@@ -11,15 +11,23 @@
    > 获取某个模块  options {object}
 
     ```javascript
-    ebapBase.get({
-        id: 'miniuiid', // 主组件的id
-        key: 'form|list|login|modal', // 模块的关键字
-        name: '', // 会把get方法返回的实例挂载到window[name]中
+    /*
+     id: 主组件的id,
+     key: 模块的关键字
+     name: 会把get方法返回的实例挂载到window[name]中
+     deps: 生命当前模块的依赖模块,
+     settings: 配置当前页面所需要的url,
+     created: 当模块实例被创建时调用
+    */
+    ebapBase.get({
+        id: 'miniuiid', 
+        key: 'form|list|login|modal', 
+        name: '',
 	deps: [{
 	  key: 'modal'
-	}], // 生命当前模块的依赖模块,
-	settings: {} // 配置当前页面所需要的url
-	created: function () {} // 当模块实例被创建时调用
+	}], 
+	settings: {} 
+	created: function () {}
     });
     ```
 2. ebapBase.regesiter
