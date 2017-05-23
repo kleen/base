@@ -23,33 +23,32 @@
     ebapBase.regesiter(moduleKey, module);
     ```
 
-3. ebapBase.utils
-   > ebapBase的公共函数，供内部和外部调用
-
-**api**
-
+**3. ebapBase.utils**
+  > ebapBase的公共函数，供内部和外部调用
+   
+   
   + ebapBase.utils.support
-    > 判断是否存在某个库，支持某个方法
+    判断是否存在某个库，支持某个方法
   + ebapBase.utils.setUrls
-    > 设置urls属性
+    设置urls属性
   + ebapBase.utils.miniSupport
-    > support的方法简写
+    support的方法简写
   + ebapBase.utils.resetRoot
-    > 重置root路径
+    重置root路径
   + ebapBase.utils.getDictLabel
-    > 获取字典标签
+    获取字典标签
   + ebapBase.utils.getInstance
-    > 根据id获取某个miniui实例
+    根据id获取某个miniui实例
   + ebapBase.utils.autoInput
-    > input文本框自动获取输入
+    input文本框自动获取输入
   + ebapBase.utils.prefixPath
-    > 为路径自动添加ctx
-  + ebapBase.utils.ajax
-    > 对$.ajax进行简单的封装，提供一些默认参数
+    为路径自动添加根路径
+  + ebapBase.utils.ajax
+    对$.ajax进行简单的封装，提供一些默认参数
   + ebapBase.utils.actions
-    > 对一些通用的动作进行封装，比如关闭
+    对一些通用的动作进行封装，比如关闭
   + ebapBase.utils.extend
-    > 为当前实例扩展其他属性，常用于扩展功能
+    为当前实例扩展其他属性，常用于扩展功能
 
 ### Modules
 
