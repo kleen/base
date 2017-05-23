@@ -39,7 +39,7 @@
      ```
     
 3. **ebapBase.utils**
-  > ebapBase的公共函数，供内部和外部调用
+> ebapBase的公共函数，供内部和外部调用
    
   + ebapBase.utils.support
     判断是否存在某个库，支持某个方法
